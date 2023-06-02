@@ -1,0 +1,20 @@
+!pip tensorflow
+
+import tensorflow as tf
+import numpy as np
+
+
+# Set Random Seed
+tf.random.set_seed(42)
+
+# 1. Create the model
+from keras.models import Sequential
+
+model_1 = Sequential([
+    tf.keras.layers.Dense(1)
+])
+
+#2. Compile the model
+model_1.compile(loss=tf.keras.losses.mae,
+                optmizer=tf.keras.optimizers.SGD(),
+                metrics=1)
